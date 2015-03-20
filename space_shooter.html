@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Space Shooter Demo</title>
+		<style>
+			canvas {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				background: transparent;
+			}
+			#background {
+				z-index: -2;
+			}
+			#main {
+				z-index: -1;
+			}
+			#ship {
+				z-index: 0;
+			}
+			.score {
+				position: relative;
+				float: right;
+				top: 5px;				
+				color: #FF7F00;
+				font-family: Helvetica, sans-serif;
+				font-size: xx-large;
+				cursor: default;
+			}
+			.game-over {
+				position: absolute;
+				top: 100px;
+				left: 210px;
+				color: #FF7F00;
+				font-family: Helvetica, sans-serif;
+				font-size: 30px;
+				cursor: default;
+				display: none;
+			}
+			.game-over span {
+				font-size: 20px;
+				cursor: pointer;
+				position: relative;
+				left: 50px;
+			}
+			.game-over span:hover {
+				color: #FFD700;
+			}
+			.loading {
+				position: absolute;
+				top: 100px;
+				left: 210px;
+				color: #FF7F00;
+				font-family: Helvetica, sans-serif;
+				font-size: 30px;
+				cursor: default;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- canvas para plano de background -->
+		<canvas id="background" width="1366" height="640">
+			
+		</canvas>
+		<!-- canvas para todas as naves inimigas(enemy ship) e tiros(bullets) -->
+		<canvas id="main" width="1366" height="640">
+		</canvas>
+		<!-- canvas para uso da nave (só pode mover-se um diante da tela) -->
+		<canvas id="ship" width="1366" height="640">
+		</canvas>
+		<div class="score">SCORE: <span id="score"></span></div>
+		<div class="game-over" id="game-over">GAME OVER<p><span onclick="game.restart()">Restart</span></p></div>
+		<div class="loading" id="loading">LOADING...<p>Please wait</p></div>
+		<script src="space_shooter.js"></script>
+	</body>
+</html>
