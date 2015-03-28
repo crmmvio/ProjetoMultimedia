@@ -72,7 +72,7 @@ var imageRepository = new function() {
 	this.bullet.src = "imgs/bullet.png";
 	this.enemy.src = "imgs/enemy.png";
 	this.enemyBullet.src = "imgs/bullet_enemy.png";
-	
+
 }
 
 
@@ -605,6 +605,7 @@ function Enemy() {
 	this.collidableWith = "bullet";
 	this.type = "enemy";
 
+	// 38 x 28
 	/*
 	 * Sets the Enemy values
 	 */
@@ -615,8 +616,8 @@ function Enemy() {
 		this.speedX = 0;
 		this.speedY = speed;
 		this.alive = true;
-		this.leftEdge = this.x - 90;
-		this.rightEdge = this.x + 90;
+		this.leftEdge = this.x - 90; // deslocamento de cada nave
+		this.rightEdge = this.x + 90; // deslocamento de cada nave
 		this.bottomEdge = this.y + 140;
 	};
 
@@ -774,15 +775,14 @@ function Game() {
 	this.spawnWave = function() {
 		var height = imageRepository.enemy.height;
 		var width = imageRepository.enemy.width;
-		var x = 100;
+		var x = NavesInimigas.xInicio();
 		var y = -height;
-		var spacer = y * 1.5;
-		for (var i = 1; i <= 18; i++) {
+		for (var i = 1; i <= NavesInimigas.quantidade; i++) {
 			this.enemyPool.get(x,y,2);
-			x += width + 25;
-			if (i % 6 == 0) {
-				x = 100;
-				y += spacer
+			x += width + NavesInimigas.espacamento.horizontal;
+			if (i % NavesInimigas.navesPorLinha() == 0) {
+				x = NavesInimigas.xInicio();
+				y += NavesInimigas.espacamento.vertical
 			}
 		}
 	}
@@ -1007,3 +1007,21 @@ window.requestAnimFrame = (function(){
 				window.setTimeout(callback, 1000 / 60);
 			};
 })();
+
+var NavesInimigas = {
+	quantidade: 30, // múltiplo de NavesInimigas.linhas
+	linhas: 3,
+	espacamento: {
+		horizontal: 25,
+		vertical: 50
+	},
+	xInicio: function() {
+		return window.innerWidth / 2 - this.larguraLinha() / 2;
+	},
+	navesPorLinha: function() {
+		return this.quantidade / this.linhas;
+	},
+	larguraLinha: function() {
+		return this.navesPorLinha() * (imageRepository.enemy.width + this.espacamento.horizontal) - this.espacamento.horizontal;
+	}
+};
