@@ -793,12 +793,14 @@
 		"side_bar_visible": true,
 		"status_bar_visible": false
 	},
-	"expanded_folders":
-	[
-		"/E/Web/data/localweb/ProjetoMultimedia"
-	],
 	"file_history":
 	[
+		"/C/inetpub/wwwroot/teste/raizen/RelatorioAnual.html",
+		"/C/inetpub/wwwroot/teste/raizen/print-rel-anual.css",
+		"/C/Projetos/Raizen/Projetos/Razoabilidade Nexo/Source/SST_Razoabilidade/trunk/DEPLOY/PRD/Web.config",
+		"/C/inetpub/wwwroot/teste/raizen/PPRA2.html",
+		"/C/Particular/Projetos/trabalho-renato-sofener/source/space_shooter.js",
+		"/C/Particular/Projetos/trabalho-renato-sofener/source/index.html",
 		"/E/Abraao Zaidan/Dropbox/Coisas pessoais/GitHub Recovery Codes.txt",
 		"/E/Abraao Zaidan/Desktop/TCC/TCC.sublime-project",
 		"/E/Abraao Zaidan/Desktop/[Ata de reunião] 2015-03-20.txt",
@@ -920,17 +922,11 @@
 		"/A/www/zf-skeleton/library/CakeWeb/Filter/Slug.php",
 		"/A/www/zf-skeleton/library/CakeWeb/ClientSide/JavaScript.php",
 		"/A/www/zf-skeleton/library/CakeWeb/Singleton.php",
-		"/A/www/zf-skeleton/library/CakeWeb/Helper.php",
-		"/A/www/zf-skeleton/public/.htaccess",
-		"/A/www/zf-skeleton/library/CakeWeb/ClientSide/Abstract.php",
-		"/A/www/zf-skeleton/library/CakeWeb/Controller/Auth.php",
-		"/A/www/zf-skeleton/application/controllers/AdminController.php",
-		"/A/www/zf-skeleton/public/static/css/css-nivo-slider.css",
-		"/A/www/zf-skeleton/library/CakeWeb/Controller/CRUD.php"
+		"/A/www/zf-skeleton/library/CakeWeb/Helper.php"
 	],
 	"find":
 	{
-		"height": 56.0
+		"height": 23.0
 	},
 	"find_in_files":
 	{
@@ -1239,7 +1235,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 28.0
+		"height": 23.0
 	},
 	"input":
 	{
@@ -1291,7 +1287,7 @@
 	"project": "projeto.sublime-project",
 	"replace":
 	{
-		"height": 52.0
+		"height": 42.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1834,7 +1830,6 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
 	"settings":
 	{
 	},
